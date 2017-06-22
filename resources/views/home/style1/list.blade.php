@@ -11,8 +11,10 @@
 
 
 @foreach($data as $v)
-        <a href="{{url('article/'.$v->art_id)}}"><h2>{{$v->art_title}}</h2></a>
-   <p class="dateview"><span>发布时间：{{date('Y-m-d H:i:s',$v->art_addtime)}}</span><span>作者：{{$v->art_editor}}</span><span>分类：[<a href="{{url('cate/'.$v->cate_id)}}">{{$v->cate_name}}</a>]</span></p>
+
+            <h2>
+                <span>[<a style="color: #f90;" href="{{url('cate/'.$v->cate_id)}}">{{$v->cate_name}}</a>]</span><a href="{{url('article/'.$v->art_id)}}"> {{$v->art_title}}</a></h2>
+   <p class="dateview1"><span>发布时间：{{date('Y-m-d H:i:s',$v->art_addtime)}}</span><span>作者：{{$v->art_editor}}</span><span>浏览：{{$v->art_view}}</span></p>
         <a href="{{url('article/'.$v->art_id)}}"><figure>
         @if($v->art_thumb)
         <img src="/{{$v->art_thumb}}">
