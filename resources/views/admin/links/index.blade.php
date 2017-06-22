@@ -96,7 +96,7 @@
                 @if(isset($keywords))
                     {!! $data->appends(array('keywords'=>$keywords))->render() !!}
                     @else
-                    {{$data->links()}} <ul><span class="rows" style="    line-height: 30px;"><h5>Page {{$data->currentPage() }} of {{$data->lastPage()}}</h5></span></ul>
+                    {{$data->links('vendor.pagination.bootstrap-4')}} <ul><span class="rows" style="    line-height: 30px;"><h5>Page {{$data->currentPage() }} of {{$data->lastPage()}}</h5></span></ul>
 
                       @endif
 

@@ -36,7 +36,7 @@
     {{--<img src="images/ad.png">--}}
     </div>
     <div class="page">
-{{$data->links()}}
+{{$data->links('vendor.pagination.bootstrap-4')}}
     </div>
 </div>
 <aside class="right">

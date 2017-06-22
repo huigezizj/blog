@@ -53,7 +53,7 @@
     <p class="dateview"><span>{{date('Y-m-d H:i:s',$v->art_addtime)}}</span><span>作者：{{$v->art_editor}}</span></p>
 @endforeach
       <div class="page">
-        {{$data->links()}}
+        {{$data->links('vendor.pagination.bootstrap-4')}}
 
       </div>
   </div>
